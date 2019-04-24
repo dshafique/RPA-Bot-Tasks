@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recorder:ActionFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:recorder="http://www.workfusion.com/recorder/v2.0.3" ignoreDelays="false">
+  <variables>
+    <variable name="first" type="STRING" value="Daoud"/>
+    <variable name="last" type="STRING" value="Shafique"/>
+    <variable name="email" type="STRING" value="daoud.shafique@bmo.com"/>
+    <variable name="role" type="STRING" value="Technology Analyst"/>
+    <variable name="job" type="STRING" value="BMO Harris Bank"/>
+  </variables>
+  <actions xsi:type="recorder:OpenURLAction" active="true" actionDetails="(https://docs.google.com/forms/d/e/1FAIpQLSd8y_5zOZi9AWr3jL7nFFjk8NYkQnpoiPkSGxyXX05sKBfI1A/viewform?usp=sf_link)" delay="0" url="https://docs.google.com/forms/d/e/1FAIpQLSd8y_5zOZi9AWr3jL7nFFjk8NYkQnpoiPkSGxyXX05sKBfI1A/viewform?usp=sf_link">
+    <actions xsi:type="recorder:WebElementAction" active="true" actionDetails="(set by /html/body/div/div[2]/form/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input xpath)" delay="0" varName="first" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" type="SET_VALUE" useElementAttribute="false"/>
+    <actions xsi:type="recorder:WebElementAction" active="true" actionDetails="(set by /html/body/div/div[2]/form/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div/div[1]/input xpath)" delay="0" varName="last" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div/div[1]/input" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" type="SET_VALUE" useElementAttribute="false"/>
+    <actions xsi:type="recorder:WebElementAction" active="true" actionDetails="(set by /html/body/div/div[2]/form/div/div[2]/div[2]/div[3]/div/div[2]/div/div[1]/div/div[1]/input xpath)" delay="0" varName="email" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[3]/div/div[2]/div/div[1]/div/div[1]/input" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" type="SET_VALUE" useElementAttribute="false"/>
+    <actions xsi:type="recorder:WebElementAction" active="true" actionDetails="(set by /html/body/div/div[2]/form/div/div[2]/div[2]/div[4]/div/div[2]/div/div[1]/div/div[1]/input xpath)" delay="0" varName="job" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[4]/div/div[2]/div/div[1]/div/div[1]/input" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" type="SET_VALUE" useElementAttribute="false"/>
+    <actions xsi:type="recorder:WebElementAction" active="true" actionDetails="(set by /html/body/div/div[2]/form/div/div[2]/div[2]/div[5]/div/div[2]/div/div[1]/div/div[1]/input xpath)" delay="0" varName="role" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[5]/div/div[2]/div/div[1]/div/div[1]/input" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" type="SET_VALUE" useElementAttribute="false"/>
+    <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" type="WEB_ELEMENT" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[6]/div/div[2]/div[1]" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+    <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" type="WEB_ELEMENT" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[7]/div/div[2]" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+    <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(g)" delay="0" text="g" rawCode="71" keyCode="34" keyChar="103" keyLocation="1" type="HOT_KEY_PRESS"/>
+    <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="({ENTER})" delay="0" text="{ENTER}" rawCode="10" keyCode="28" keyChar="13" keyLocation="4"/>
+    <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" type="WEB_ELEMENT" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[2]/div[8]/div/div[2]" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+    <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(i)" delay="0" text="i" rawCode="73" keyCode="23" keyChar="105" keyLocation="1" type="HOT_KEY_PRESS"/>
+    <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="({ENTER})" delay="0" text="{ENTER}" rawCode="10" keyCode="28" keyChar="13" keyLocation="4"/>
+    <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="200" type="WEB_ELEMENT" webElementLocator="/html/body/div/div[2]/form/div/div[2]/div[3]/div[1]/div[1]/div" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+  </actions>
+</recorder:ActionFlow>

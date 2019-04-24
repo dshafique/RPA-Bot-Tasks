@@ -1,0 +1,8 @@
+"name","type","value"
+"ForEachAction883763024_index","NUMBER","0"
+"last","STRING",""
+"ForEachAction2020330999_index","NUMBER","2"
+"column","LIST","""[Daoud, S, Daoud1@email.com, bmo, analsyt]"""
+"employees","TABLE","""[[Daoud, Osman], [S, F], [Daoud1@email.com, osman1@email.com], [bmo, tcs], [analsyt, developer]]"""
+"first","STRING",""
+"element","STRING","Daoud1@email.com"
