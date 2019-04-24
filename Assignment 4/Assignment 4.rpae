@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recorder:ActionFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:recorder="http://www.workfusion.com/recorder/v2.0.3" ignoreDelays="false">
+  <variables>
+    <variable name="image" type="BOOLEAN" value="false"/>
+    <variable name="tweet" type="STRING" value=""/>
+  </variables>
+  <actions xsi:type="recorder:OpenURLAction" active="true" actionDetails="(https://twitter.com/workfusion)" delay="0" url="https://twitter.com/workfusion" type="CHROME">
+    <actions xsi:type="recorder:MaximizeCurrentWindowAction" active="true" actionDetails="" delay="0"/>
+    <actions xsi:type="recorder:WhileAction" active="true" actionDetails="(image = &quot;false&quot;)" delay="0" leftOperand="${image}" rightOperand="false" leftOperandType="VARIABLE" rightOperandType="BOOLEAN">
+      <actions xsi:type="recorder:MouseScrollAction" active="true" actionDetails="(1 lines down)" delay="0" imageName="1556139462735-anchor-1556139463023.apng" fullImageName="1556139462735.png" type="IMAGE" notches="1"/>
+      <actions xsi:type="recorder:WaitForImageAction" active="true" actionDetails="(500 ms)" delay="0" imageName="1556137910033-anchor.apng" fullImageName="1556137910008.png" varName="image" waitTimeout="500"/>
+    </actions>
+  </actions>
+  <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" offsetX="52" offsetY="3" imageName="1556138092384-anchor-1556138092457.apng" fullImageName="1556138092384.png" type="IMAGE" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+  <actions xsi:type="recorder:OcrAction" active="true" actionDetails="(to 'tweet' rectangle 905 x 241)" delay="0" offsetX="-6" offsetY="134" imageName="1556138251184-anchor-1556138251290.apng" fullImageName="1556138251184.png" type="CONTROL" varName="tweet" width="905" height="241"/>
+  <actions xsi:type="recorder:ClipboardAction" active="true" actionDetails="(from 'tweet')" delay="0" varName="tweet" activeConversion="STRING_TO_STRING" type="FROM_VARIABLE">
+    <stringToStringConversion targetType="STRING"/>
+    <delimitedListConversion targetType="LIST" trimValues="false"/>
+    <delimitedTableConversion targetType="TABLE" trimValues="false"/>
+  </actions>
+  <actions xsi:type="recorder:LaunchAppAction" active="true" actionDetails="(Notepad; wait for 0ms; poll every 0ms)" delay="0" command="Notepad" autoDetectWindow="true"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(Ctrl+v)" delay="0" modifiers="2" text="v" rawCode="86" keyCode="47" keyChar="118" keyLocation="1" type="HOT_KEY_PRESS"/>
+</recorder:ActionFlow>
