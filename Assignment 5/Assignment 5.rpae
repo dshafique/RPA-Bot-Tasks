@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recorder:ActionFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:recorder="http://www.workfusion.com/recorder/v2.0.3" ignoreDelays="false">
+  <variables>
+    <variable name="file1path" type="STRING" value="&quot;C:\Users\dawud\Downloads\files_for_automation\Text-file-1.txt&quot;"/>
+    <variable name="file1txt" type="STRING" value=""/>
+    <variable name="date" type="DATE" value="2019-04-27T16:40:01-05:00[America/Chicago]"/>
+    <variable name="datestr" type="STRING" value=""/>
+    <variable name="file1new" type="STRING" value=""/>
+    <variable name="file1list" type="LIST" value="[]"/>
+    <variable name="file2path" type="STRING" value="&quot;C:\Users\dawud\Downloads\files_for_automation\Text-file-2.txt&quot;"/>
+    <variable name="line" type="STRING" value=""/>
+  </variables>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(Win+r)" delay="0" modifiers="4" text="r" rawCode="82" keyCode="19" keyChar="114" keyLocation="1" type="HOT_KEY_PRESS"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(from variable 'file1path')" delay="0" varName="file1path" type="TEXT_FROM_VAR"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="({ENTER})" delay="0" text="{ENTER}" rawCode="10" keyCode="28" keyChar="13" keyLocation="4"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(Ctrl+a)" delay="0" modifiers="2" text="a" rawCode="65" keyCode="30" keyChar="97" keyLocation="1" type="HOT_KEY_PRESS"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(Ctrl+c)" delay="0" modifiers="2" text="c" rawCode="67" keyCode="46" keyChar="99" keyLocation="1" type="HOT_KEY_PRESS"/>
+  <actions xsi:type="recorder:ClipboardAction" active="true" actionDetails="(to 'file1txt')" delay="0" varName="file1txt" activeConversion="STRING_TO_STRING" type="TO_VARIABLE">
+    <stringToStringConversion targetType="STRING"/>
+    <delimitedListConversion targetType="LIST" trimValues="false"/>
+    <delimitedTableConversion targetType="TABLE" trimValues="false"/>
+  </actions>
+  <actions xsi:type="recorder:ConstantValueAction" active="true" actionDetails="(to 'date' = Now) - DATE" delay="0" varName="date" stringValue="" numberValue="0" booleanValue="false" useCurrentDate="true"/>
+  <actions xsi:type="recorder:DateFormatAction" active="true" actionDetails="" delay="0" targetVariable="datestr" direction="TYPE_TO_STRING" inputLocale="en-US" outputMask="MMMM dd yyyy" outputLocale="en-US" input="date"/>
+  <actions xsi:type="recorder:TextReplaceAction" active="true" actionDetails="(May 12 2018 to ${datestr} in 'file1txt' to 'file1new')" delay="0" targetVariable="file1new" sourceVariable="file1txt" find="May 12 2018" replace="${datestr}"/>
+  <actions xsi:type="recorder:TextReplaceAction" active="true" actionDetails="(human to BOT in 'file1new' to 'file1new')" delay="0" targetVariable="file1new" sourceVariable="file1new" find="human" replace="BOT" replaceAll="true"/>
+  <actions xsi:type="recorder:TextSplitAction" active="true" actionDetails="('file1new', separator: Comma to 'file1list')" delay="0" targetVariable="file1list" sourceVariable="file1new" separator=","/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(Win+r)" delay="0" modifiers="4" text="r" rawCode="82" keyCode="19" keyChar="114" keyLocation="1" type="HOT_KEY_PRESS"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(from variable 'file2path')" delay="0" varName="file2path" type="TEXT_FROM_VAR"/>
+  <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="({ENTER})" delay="0" text="{ENTER}" rawCode="10" keyCode="28" keyChar="13" keyLocation="4"/>
+  <actions xsi:type="recorder:ForeachAction" active="true" actionDetails="(element) in (file1list)" delay="0" varName="file1list" pointerName="element">
+    <actions xsi:type="recorder:TextTrimAction" active="true" actionDetails="('element' to 'line')" delay="0" targetVariable="line" sourceVariable="element"/>
+    <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="(from variable 'line')" delay="0" varName="line" type="TEXT_FROM_VAR"/>
+    <actions xsi:type="recorder:KeyboardAction" active="true" actionDetails="({ENTER})" delay="0" text="{ENTER}" rawCode="10" keyCode="28" keyChar="13" keyLocation="4"/>
+  </actions>
+</recorder:ActionFlow>
